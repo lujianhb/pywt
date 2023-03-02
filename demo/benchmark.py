@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# import matplotlib as mpl
+# print(mpl.get_backend())
 
 import gc
 import sys
@@ -54,7 +56,6 @@ for j, size in enumerate(sizes):
         times_idwt[i].append(min_t2)
 
     gc.collect()
-
 
 for j, (times, name) in enumerate([(times_dwt, 'dwt'), (times_idwt, 'idwt')]):
     fig = plt.figure(j)
